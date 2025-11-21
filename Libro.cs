@@ -55,5 +55,29 @@ namespace verificagit
             Numpagine = numpagine;
         }
 
+        public override string ToString()
+        {
+            return $"Titolo libro: {Titolo}, Autore: {Autore}, Editore: {Editore}, Data di pubblicazione: {Datapubblicazione}, Numero di pagine: {Numpagine}";
+        }
+
+        public string ReadingTime(int npagine)
+        {
+            string orelettura;
+            if (npagine < 100)
+            {
+                orelettura = "tempo di lettura del libro: 1 ora";
+            }
+            else if(npagine < 200)
+            {
+                orelettura = "tempo di lettura del libro compreso tra una e due ore";
+            }
+            else
+            {
+                orelettura = "tempo di lettura del libro superiore a 2 ore";
+            }
+
+            return orelettura ;
+        }
+
     }
 }
